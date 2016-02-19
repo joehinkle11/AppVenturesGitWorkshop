@@ -50,7 +50,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am a button"
+        android:text="TestButton3"
         android:id="@+id/button2"
         android:onClick="changeColorClicked"
         android:layout_below="@+id/button"
