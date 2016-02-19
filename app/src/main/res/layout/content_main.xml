@@ -43,6 +43,7 @@
         android:layout_height="wrap_content"
         android:text="I am a button"
         android:id="@+id/button2"
+        android:onClick="changeColorClicked"
         android:layout_below="@+id/button"
         android:layout_toRightOf="@+id/button"
         android:layout_toEndOf="@+id/button" />

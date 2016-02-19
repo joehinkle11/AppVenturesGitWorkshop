@@ -1,5 +1,6 @@
 package com.josephhinkle.appventuresgittest;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
+    private int green;
+    private int blue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        green = 50;
+        blue = 50;
     }
 
     @Override
@@ -48,5 +54,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void changeColorClicked(View view) {
+        green += 50;
+        blue += 20;
+        if (green > 255) {
+            green = 0;
+        }
+        if (blue > 255) {
+            blue = 0;
+        }
+        view.setBackgroundColor(Color.rgb(100, green, blue));
     }
 }
