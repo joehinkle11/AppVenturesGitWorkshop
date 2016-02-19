@@ -1,6 +1,7 @@
 package com.josephhinkle.appventuresgittest;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,6 +13,8 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+    private int green;
+    private int blue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,9 +29,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                Toast.makeText(MainActivity.this, "Hey abhinay", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Hey abhinay and pavani", Toast.LENGTH_SHORT).show();
             }
         });
+
+        green = 50;
+        blue = 50;
     }
 
     @Override
@@ -56,5 +62,16 @@ public class MainActivity extends AppCompatActivity {
     public void DavidFixedButtonClick(View view) {
         Intent myIntent = new Intent(MainActivity.this, DavidClass.class);
         startActivity(myIntent);
+    }
+    public void changeColorClicked(View view) {
+        green += 50;
+        blue += 20;
+        if (green > 255) {
+            green = 0;
+        }
+        if (blue > 255) {
+            blue = 0;
+        }
+        view.setBackgroundColor(Color.rgb(100, green, blue));
     }
 }
