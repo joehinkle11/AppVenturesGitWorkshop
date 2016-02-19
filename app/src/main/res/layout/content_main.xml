@@ -15,8 +15,16 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:id="@+id/textView2" />
+        android:text="Hackathon Approaches"
+        android:id="@+id/textView2"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Made by Jay"
+        android:layout_margin="50dp"
+        />
 
     <TextView
         android:layout_width="wrap_content"
@@ -57,4 +65,16 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Hurray Test"
+        android:id="@+id/textView3"
+        android:layout_below="@+id/button3"
+        android:layout_alignLeft="@+id/button"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginTop="91dp" />
+
 </RelativeLayout>
