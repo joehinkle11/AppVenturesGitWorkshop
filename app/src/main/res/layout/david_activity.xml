@@ -10,4 +10,13 @@
         android:text="David Text"
         android:id="@+id/textView3"
         android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press Me"
+        android:id="@+id/pressMe"
+        android:onClick="pressMeClick"
+        android:layout_gravity="center_horizontal" />
+
 </LinearLayout>
