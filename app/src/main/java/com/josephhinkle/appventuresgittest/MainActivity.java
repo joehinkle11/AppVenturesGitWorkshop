@@ -1,5 +1,6 @@
 package com.josephhinkle.appventuresgittest;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,10 +11,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     private int green;
@@ -22,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
     Button mbtn_Add;
     EditText meTxt_ArrayWords;
     Spinner mspin_Array;
+    ArrayList<String> mlist = new ArrayList<String>();
+    ArrayAdapter<String> madapter;
 
 
     @Override
@@ -43,6 +49,30 @@ public class MainActivity extends AppCompatActivity {
 
         green = 50;
         blue = 50;
+
+        
+        //Trying to add items to spinner array
+        madapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mlist);
+
+        View.OnClickListener mlistener = new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                meTxt_ArrayWords = (EditText) findViewById(R.id.eTxt_ArrayWords);
+                mlist.add(meTxt_ArrayWords.getText().toString());
+                meTxt_ArrayWords.setText("");
+                madapter.notifyDataSetChanged();
+            }
+        };
+
+        mbtn_Add = (Button) findViewById(R.id.btn_Add);
+        mbtn_Add.setOnClickListener(mlistener);
+
+        mspin_Array = (Spinner) findViewById(R.id.spin_Array);
+        mspin_Array.setAdapter(madapter);
+        madapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+
+
     }
 
     @Override
