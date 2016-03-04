@@ -23,11 +23,13 @@ public class MainActivity extends AppCompatActivity {
     private int green;
     private int blue;
 
+    // For Spinner Array
     Button mbtn_Add;
     EditText meTxt_ArrayWords;
     Spinner mspin_Array;
     ArrayList<String> mlist = new ArrayList<String>();
     ArrayAdapter<String> madapter;
+    // End of spinner stuff
 
 
     @Override
@@ -51,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         blue = 50;
 
         
-        //Trying to add items to spinner array
+        // Trying to add items to spinner array
         madapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, mlist);
 
         View.OnClickListener mlistener = new View.OnClickListener() {
@@ -70,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         mspin_Array = (Spinner) findViewById(R.id.spin_Array);
         mspin_Array.setAdapter(madapter);
         madapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
+        // End of Spinner stuff
 
 
     }
