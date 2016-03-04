@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:text="Change Made by Jay"
         android:layout_margin="50dp"
-        />
+        android:id="@+id/button4" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -67,15 +67,29 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="27dp" />
 
-    <TextView
+    <Spinner
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spin_Array"
+        android:layout_below="@+id/button3"
+        android:layout_alignLeft="@+id/btn_Add"
+        android:layout_alignStart="@+id/btn_Add" />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/eTxt_ArrayWords"
+        android:layout_below="@+id/spin_Array"
+        android:layout_alignLeft="@+id/btn_Add"
+        android:layout_alignStart="@+id/btn_Add" />
+
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Hurray Test"
-        android:id="@+id/textView3"
-        android:layout_below="@+id/button3"
-        android:layout_alignLeft="@+id/button"
-        android:layout_alignStart="@+id/button"
-        android:layout_marginTop="91dp" />
+        android:text="@string/btn_Add"
+        android:id="@+id/btn_Add"
+        android:layout_below="@+id/eTxt_ArrayWords"
+        android:layout_toRightOf="@+id/button3"
+        android:layout_toEndOf="@+id/button3" />
 
 </RelativeLayout>
